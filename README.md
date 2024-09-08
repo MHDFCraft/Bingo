@@ -17,7 +17,6 @@ _✨一款高版本(预计兼容低版本的)的Bukkit Bingo插件✨_
 </p>
 
 <p align="center">
-  <a href="https://github.com/MHDFCraft/Bingo/releases">下载</a>
 </p>
 
 <div align="center">
