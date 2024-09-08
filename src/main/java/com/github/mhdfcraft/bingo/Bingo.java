@@ -1,29 +1,24 @@
 package com.github.mhdfcraft.bingo;
 
-import com.github.mhdfcraft.bingo.logs.Log;
-import com.github.mhdfcraft.bingo.utils.Utils;
+import com.github.mhdfcraft.bingo.util.Util;
+import com.github.mhdfcraft.bingo.util.message.LogUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Bingo extends JavaPlugin {
 
-    public static Log log = new Log();
-
-    public Bingo() {
-        Utils.instance = this;
-    }
-
-    @Override
-    public void onLoad() {
-        log.info("Loaded " + getDescription().getFullName());
-    }
-
     @Override
     public void onEnable() {
-        log.info("Enabled " + getDescription().getFullName());
+        Util.instance = this;
+
+        LogUtil.colorLog("&f[MHDF-Tools] &a插件加载完成!");
+        LogUtil.colorLog("&f[MHDF-Tools] &a欢迎使用梦东系列插件 交流群号:129139830");
     }
 
     @Override
     public void onDisable() {
-        log.info("Disabled " + getDescription().getFullName());
+        Util.instance = null;
+
+        LogUtil.colorLog("&f[MHDF-Tools] &9插件已卸载! 感谢您再次支持!");
+        LogUtil.colorLog("&f[MHDF-Tools] &a欢迎使用梦东系列插件 交流群号:129139830");
     }
 }
