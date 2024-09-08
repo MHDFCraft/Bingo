@@ -1,0 +1,7 @@
+name: Bingo
+version: '${project.version}'
+main: com.github.love-mhdf.bingo.Bingo
+api-version: '1.21'
+load: STARTUP
+authors: [ChengZhiYa]
+website: https://github.com/Love-MHDF/Bingo
