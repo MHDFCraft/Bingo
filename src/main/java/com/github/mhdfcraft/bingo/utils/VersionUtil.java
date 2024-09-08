@@ -2,52 +2,61 @@ package com.github.mhdfcraft.bingo.utils;
 
 import org.bukkit.Bukkit;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public final class VersionUtil {
-    public static String getVersion() {
-        return Bukkit.getVersion().split("MC: ")[1].replace(")", "");
+    public static int getVersion() {
+        Pattern pattern = Pattern.compile("MC: 1\\.([0-9]+)");
+        Matcher matcher = pattern.matcher(Bukkit.getVersion());
+        if (matcher.find()) {
+            return Integer.parseInt(matcher.group(1).trim());
+        }
+        // 无法获取游戏版本
+        return -1;
     }
 
-    public static boolean is1_8() {
-        return getVersion().startsWith("1.8");
+    public static boolean is1_8orAbove() {
+        return getVersion() >= 8;
     }
 
     public static boolean is1_9orAbove() {
-        return !getVersion().startsWith("1.7") || !getVersion().startsWith("1.8");
+        return getVersion() >= 9;
     }
 
     public static boolean is1_12orAbove() {
-        return getVersion().startsWith("1.12") || getVersion().startsWith("1.13") || getVersion().startsWith("1.14") || getVersion().startsWith("1.15") || getVersion().startsWith("1.16") || getVersion().startsWith("1.17") || getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 12;
     }
 
     public static boolean is1_13orAbove() {
-        return getVersion().startsWith("1.13") || getVersion().startsWith("1.14") || getVersion().startsWith("1.15") || getVersion().startsWith("1.16") || getVersion().startsWith("1.17") || getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 13;
     }
 
     public static boolean is1_14orAbove() {
-        return getVersion().startsWith("1.14") || getVersion().startsWith("1.15") || getVersion().startsWith("1.16") || getVersion().startsWith("1.17") || getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 14;
     }
 
     public static boolean is1_15orAbove() {
-        return getVersion().startsWith("1.15") || getVersion().startsWith("1.16") || getVersion().startsWith("1.17") || getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 15;
     }
 
     public static boolean is1_16orAbove() {
-        return getVersion().startsWith("1.16") || getVersion().startsWith("1.17") || getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 16;
     }
 
     public static boolean is1_17orAbove() {
-        return getVersion().startsWith("1.17") || getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 17;
     }
 
     public static boolean is1_18orAbove() {
-        return getVersion().startsWith("1.18") || getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 18;
     }
 
     public static boolean is1_19orAbove() {
-        return getVersion().startsWith("1.19") || getVersion().startsWith("1.20");
+        return getVersion() >= 19;
     }
 
     public static boolean is1_20orAbove() {
-        return getVersion().startsWith("1.20") || getVersion().startsWith("1.21");
+        return getVersion() >= 20;
     }
 }

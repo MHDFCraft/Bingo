@@ -7,14 +7,14 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 
 public final class LangUtil {
-    private static final File langFile = new File(Util.instance.getDataFolder(),"lang.yml");
+    private static final File langFile = new File(Util.instance.getDataFolder(), "lang.yml");
     private static YamlConfiguration lang;
 
     public static void saveLang() {
         // 判断设备语言是否为中文,如果是使用中文语言文件
         if (Util.getLanguage().contains("zh")) {
-            ResourceUtil.saveResource(langFile.getParent(),langFile.getName() + "_zh",false);
-        }else {
+            ResourceUtil.saveResource(langFile.getParent(), langFile.getName() + "_zh", false);
+        } else {
             ResourceUtil.saveResource(langFile.getParent(), langFile.getName() + "_en", false);
         }
     }
