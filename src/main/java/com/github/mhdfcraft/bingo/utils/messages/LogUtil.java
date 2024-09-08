@@ -1,6 +1,6 @@
-package com.github.mhdfcraft.bingo.util.message;
+package com.github.mhdfcraft.bingo.utils.messages;
 
-import com.github.mhdfcraft.bingo.util.Util;
+import com.github.mhdfcraft.bingo.utils.Util;
 import org.bukkit.Bukkit;
 
 public final class LogUtil {

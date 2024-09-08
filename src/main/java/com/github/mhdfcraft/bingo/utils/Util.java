@@ -1,4 +1,4 @@
-package com.github.mhdfcraft.bingo.util;
+package com.github.mhdfcraft.bingo.utils;
 
 import com.github.mhdfcraft.bingo.Bingo;
 

@@ -1,6 +1,6 @@
-package com.github.mhdfcraft.bingo.util.file;
+package com.github.mhdfcraft.bingo.utils.files;
 
-import com.github.mhdfcraft.bingo.util.Util;
+import com.github.mhdfcraft.bingo.utils.Util;
 
 import java.io.File;
 import java.io.IOException;

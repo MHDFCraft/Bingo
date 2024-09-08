@@ -1,11 +1,10 @@
-package com.github.mhdfcraft.bingo.util.message;
+package com.github.mhdfcraft.bingo.utils.messages;
 
-import com.github.mhdfcraft.bingo.util.Util;
-import com.github.mhdfcraft.bingo.util.file.ResourceUtil;
+import com.github.mhdfcraft.bingo.utils.Util;
+import com.github.mhdfcraft.bingo.utils.files.ResourceUtil;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
-import java.util.Locale;
 
 public final class LangUtil {
     private static final File langFile = new File(Util.instance.getDataFolder(),"lang.yml");

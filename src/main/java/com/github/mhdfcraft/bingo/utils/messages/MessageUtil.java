@@ -1,6 +1,6 @@
-package com.github.mhdfcraft.bingo.util.message;
+package com.github.mhdfcraft.bingo.utils.messages;
 
-import com.github.mhdfcraft.bingo.util.VersionUtil;
+import com.github.mhdfcraft.bingo.utils.VersionUtil;
 import net.md_5.bungee.api.ChatColor;
 
 import java.util.regex.Matcher;

@@ -1,7 +1,7 @@
 package com.github.mhdfcraft.bingo;
 
-import com.github.mhdfcraft.bingo.util.Util;
-import com.github.mhdfcraft.bingo.util.message.LogUtil;
+import com.github.mhdfcraft.bingo.utils.Util;
+import com.github.mhdfcraft.bingo.utils.messages.LogUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Bingo extends JavaPlugin {

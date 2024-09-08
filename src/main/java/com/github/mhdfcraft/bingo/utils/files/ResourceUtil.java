@@ -1,4 +1,4 @@
-package com.github.mhdfcraft.bingo.util.file;
+package com.github.mhdfcraft.bingo.utils.files;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -52,7 +52,7 @@ public final class ResourceUtil {
                 }
             }
         } catch (IOException e) {
-            throw new RuntimeException("Failed to save resource to file", e);
+            throw new RuntimeException("Failed to save resource to files", e);
         }
     }
 }
